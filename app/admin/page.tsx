@@ -11,11 +11,7 @@ export default async function Page() {
                 </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
-                <Link href={"/admin/citations/1"} className={buttonVariants({size: "lg", variant: "outline"})}>Citation 1</Link>
-
-                <Link href={"/admin/citations/flavio"} className={buttonVariants({size: "lg", variant: "outline"})}>Citation Flavio</Link>
-
-                <Link href={"/admin/citations/fraise"} className={buttonVariants({size: "lg", variant: "outline"})}>Citation fraise</Link>
+                <Link href={"/admin/citations/new"} className={buttonVariants({size: "lg", variant: "outline"})}>Create citation</Link>
             </CardContent>
         </Card>
     )
