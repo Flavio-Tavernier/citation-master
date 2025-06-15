@@ -24,12 +24,18 @@ export default async function Page() {
                 
                 { citations.map(citation => (
                     <Card className="p-4 flex flex-row justify-between" key={citation.id}>
-                        <div className="">
+                        <div>
                             <p className="italic text-lg text-gray-700 mb-2">&ldquo;{citation.citation}&rdquo;</p>
                             <p className="text-sm text-gray-500 mt-2">— {citation.author}</p>
                         </div>
 
-                        <DeleteCitationButton id={citation.id}/>
+                        <div className="flex flex-col gap-4">
+                            <DeleteCitationButton id={citation.id}/>
+
+                            <Link href={`/admin/citations/${citation.id}`} className={buttonVariants({size: "sm", variant: "outline"})}>🖊️</Link>
+
+                            <Link href={`/citations/${citation.id}`} className={buttonVariants({size: "sm", variant: "outline"})}>🔗</Link>
+                        </div>
                     </Card>
                 ))}
             </CardContent>

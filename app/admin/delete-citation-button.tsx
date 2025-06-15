@@ -20,7 +20,8 @@ export function DeleteCitationButton(props: {id: number}) {
     return <Button 
             onClick={() => { isConfirmed ? onDelete() : setIsConfirmed(true)}} 
             variant={isConfirmed ? "destructive" : "outline"}
+            size="sm"
             >
-                X
+                🗑️
             </Button>
 }
