@@ -1,1 +1,1 @@
-Projet fictif pour découverir de Next.js
+Projet fictif pour découverir Next.js
