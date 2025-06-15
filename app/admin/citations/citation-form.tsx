@@ -6,7 +6,7 @@ import { Input } from "@/src/components/ui/input";
 import { Label } from "@/src/components/ui/label";
 import { useState } from "react";
 import { useFormStatus } from "react-dom";
-import { createCitationAction } from "../citation.action";
+import { createCitationAction } from "./citation.action";
 
 export default function Page() {
     const [isLoading, setIsloading] = useState(false);

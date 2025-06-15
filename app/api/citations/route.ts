@@ -9,17 +9,12 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-    const formData = await request.formData();
-
-    const data = {
-        citation: formData.get('citation'),
-        author: formData.get('author'),
-    }
+    const json = await request.json();
 
     const newCitation = await prisma.citation.create({
         data: {
-            citation: String(formData.get('citation')),
-            author: String(formData.get('author')),
+            citation: json.citation,
+            author: json.author,
         }
     })
     
